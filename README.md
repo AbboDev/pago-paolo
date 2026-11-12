@@ -1,50 +1,88 @@
-# Welcome to your Expo app 👋
+# Pago Paolo
 
-This is an [Expo](https://expo.dev) project created with `create-expo-app`.
+A cross-platform mobile application built with **React Native**, **Expo**, and **TypeScript** to track shared expenses, balances, and who owes what.
 
-## Get started
+---
 
-1. Install dependencies
+## What the Application Does
 
-   ```bash
-   pnpm install
-   ```
+**Pago Paolo** simplifies tracking group expenses and settling debts among friends, roommates, and travel companions. Inspired by the everyday dilemma _"Chi paga?"_ (Who pays?), Pago Paolo keeps a transparent, straightforward ledger so everyone knows who covered an expense, who owes money, and the most efficient way to settle balances.
 
-2. Start the app
+### Key Features
 
-   ```bash
-    pnpm expo start
-   ```
+- **Shared Expense Tracking**:
 
-In the output, you'll find options to open the app in a
+  - Quickly log expenses, dinners, bills, and joint purchases.
+  - Split costs evenly or assign custom shares to specific participants.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Balance & Debt Calculation**:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+  - Real-time overview of who is owed money and who needs to pay.
+  - Automatically calculates net balances and minimizes the number of transactions needed to settle debts.
 
-## Get a fresh project
+- **Activity & Settlement**:
 
-When you're ready, run:
+  - Keep a clear chronological history of expenses and settlements.
+  - Mark debts as settled once payments are completed.
+
+- **Cross-Platform**:
+  - Seamless experience across **iOS**, **Android**, and the **Web** powered by Expo Router.
+
+---
+
+## Tech Stack
+
+- **Framework**: [Expo](https://expo.dev/) (SDK 52) with [React Native](https://reactnative.dev/)
+- **Routing**: [Expo Router](https://docs.expo.dev/router/introduction/) (File-based navigation)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Code Quality**: ESLint, Prettier, Husky, lint-staged, and Commitlint (Conventional Commits)
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js**: `>= 24` (see [.nvmrc](.nvmrc))
+- **pnpm**: `>= 10.0.0`
+
+### Installation
 
 ```bash
-pnpm run reset-project
+pnpm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Development
 
-## Learn more
+Start the development server:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+pnpm start
+# or
+pnpm expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+In the interactive terminal menu:
 
-## Join the community
+- Press `i` to launch in the **iOS Simulator**
+- Press `a` to launch in the **Android Emulator**
+- Press `w` to launch in the **Web browser**
+- Scan the displayed QR code with the **Expo Go** app on a physical device
 
-Join our community of developers creating universal apps.
+### Code Quality & Scripts
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Lint**:
+  ```bash
+  pnpm run lint
+  ```
+- **Tests**:
+  ```bash
+  pnpm test
+  ```
+
+---
+
+## Git & Commit Conventions
+
+This project enforces [Conventional Commits](https://www.conventionalcommits.org/) via **Commitlint**, **Husky**, and **lint-staged**. Staged files are automatically formatted with Prettier and checked with ESLint upon commit.
