@@ -32,11 +32,27 @@ A cross-platform mobile application built with **React Native**, **Expo**, and *
 
 ## Tech Stack
 
+- **Backend & Database**: [Supabase](https://supabase.com/) (PostgreSQL with Row Level Security & Realtime)
 - **Framework**: [Expo](https://expo.dev/) (SDK 58) with [React Native](https://reactnative.dev/)
 - **Routing**: [Expo Router](https://docs.expo.dev/router/introduction/) (File-based navigation)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Package Manager**: [pnpm](https://pnpm.io/)
 - **Code Quality**: ESLint, Prettier, Husky, lint-staged, and Commitlint (Conventional Commits)
+
+---
+
+## Supabase Setup
+
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+2. Fill in your project URL and Anon Key from your Supabase Dashboard:
+   ```env
+   EXPO_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+   EXPO_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+   ```
+3. Run the SQL schema and RLS policies from [supabase/schema.sql](supabase/schema.sql) in the Supabase SQL Editor.
 
 ---
 
