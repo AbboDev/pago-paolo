@@ -34,6 +34,7 @@ A cross-platform mobile application built with **React Native**, **Expo**, and *
 
 - **Backend & Database**: [Supabase](https://supabase.com/) (PostgreSQL with Row Level Security & Realtime)
 - **Framework**: [Expo](https://expo.dev/) (SDK 58) with [React Native](https://reactnative.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) via [NativeWind v4](https://www.nativewind.dev/)
 - **Routing**: [Expo Router](https://docs.expo.dev/router/introduction/) (File-based navigation)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Package Manager**: [pnpm](https://pnpm.io/)
