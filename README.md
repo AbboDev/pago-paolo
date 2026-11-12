@@ -32,7 +32,7 @@ A cross-platform mobile application built with **React Native**, **Expo**, and *
 
 ## Tech Stack
 
-- **Framework**: [Expo](https://expo.dev/) (SDK 52) with [React Native](https://reactnative.dev/)
+- **Framework**: [Expo](https://expo.dev/) (SDK 58) with [React Native](https://reactnative.dev/)
 - **Routing**: [Expo Router](https://docs.expo.dev/router/introduction/) (File-based navigation)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Package Manager**: [pnpm](https://pnpm.io/)
@@ -44,7 +44,7 @@ A cross-platform mobile application built with **React Native**, **Expo**, and *
 
 ### Prerequisites
 
-- **Node.js**: `>= 24` (see [.nvmrc](.nvmrc))
+- **Node.js**: `>= 26` (see [.nvmrc](.nvmrc))
 - **pnpm**: `>= 10.0.0`
 
 ### Installation
@@ -72,13 +72,27 @@ In the interactive terminal menu:
 
 ### Code Quality & Scripts
 
+- **Typecheck**:
+  ```bash
+  pnpm run typecheck
+  ```
 - **Lint**:
   ```bash
   pnpm run lint
+  # or auto-fix
+  pnpm run lint:fix
+  ```
+- **Format**:
+  ```bash
+  pnpm run format
+  # or check without writing
+  pnpm run format:check
   ```
 - **Tests**:
   ```bash
   pnpm test
+  # or watch mode
+  pnpm run test:watch
   ```
 
 ---
