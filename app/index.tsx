@@ -1,11 +1,17 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+
+import { Button } from '@/components/ui/button';
+import { Text } from '@/components/ui/text';
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center bg-white dark:bg-black">
-      <Text className="text-base font-medium text-black dark:text-white">
+    <View className="flex-1 items-center justify-center gap-4 bg-background p-4">
+      <Text className="text-xl font-bold">
         Edit app/index.tsx to edit this screen.
       </Text>
+      <Button>
+        <Text>Button</Text>
+      </Button>
     </View>
   );
 }
