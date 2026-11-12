@@ -240,6 +240,9 @@ importers:
       expo-linking:
         specifier: ~58.0.17
         version: 58.0.17(expo@58.0.24)(react-native@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(@react-native/metro-config@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(supports-color@8.1.1))(@types/react@19.0.14)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)(supports-color@8.1.1)(typescript@5.8.2)
+      expo-localization:
+        specifier: ~58.0.5
+        version: 58.0.5(expo@58.0.24)(react@19.3.0)
       expo-router:
         specifier: ~58.0.31
         version: 58.0.31(0847e0b007c8aa21c7cf9d5d740a21e5)
@@ -255,6 +258,9 @@ importers:
       expo-system-ui:
         specifier: ~58.0.7
         version: 58.0.7(expo@58.0.24)(react-native-web@0.21.4(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-native@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(@react-native/metro-config@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(supports-color@8.1.1))(@types/react@19.0.14)(react@19.3.0)(supports-color@8.1.1))(supports-color@8.1.1)
+      i18next:
+        specifier: ^27.1.1
+        version: 27.1.1(typescript@5.8.2)
       lucide-react-native:
         specifier: ^1.72.0
         version: 1.72.0(@types/react@19.0.14)(react-native-svg@15.16.1(react-native@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(@react-native/metro-config@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(supports-color@8.1.1))(@types/react@19.0.14)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0))(react-native@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(@react-native/metro-config@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(supports-color@8.1.1))(@types/react@19.0.14)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)
@@ -267,6 +273,9 @@ importers:
       react-dom:
         specifier: 19.3.0
         version: 19.3.0(react@19.3.0)
+      react-i18next:
+        specifier: ^18.0.1
+        version: 18.0.1(@types/react@19.0.14)(i18next@27.1.1(typescript@5.8.2))(react@19.3.0)(typescript@5.8.2)
       react-native:
         specifier: 0.88.1
         version: 0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(@react-native/metro-config@0.88.1(@babel/core@7.26.10(supports-color@8.1.1))(supports-color@8.1.1))(@types/react@19.0.14)(react@19.3.0)(supports-color@8.1.1)
@@ -4951,6 +4960,15 @@ packages:
       react: '*'
       react-native: '*'
 
+  expo-localization@58.0.5:
+    resolution:
+      {
+        integrity: sha512-2wyZl/5wn95l38AAtdaUAq2VMJWbGbgQQDEuIEkkemmsA/BZ8gS21Nq+7I2X9hDfL5Z+4hlyLVdPtDIH0vvt1A==,
+      }
+    peerDependencies:
+      expo: '*'
+      react: '*'
+
   expo-modules-autolinking@58.1.0:
     resolution:
       {
@@ -5608,6 +5626,12 @@ packages:
         integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==,
       }
 
+  html-parse-stringify@4.0.1:
+    resolution:
+      {
+        integrity: sha512-0zHsZJrK7S3K2aucXWL6ycoYJ/iNtIcFHC/nYQgFklPtrv5LpJctIiSCroWZWeuoXvuyFdzp6KzjJQ+OT5MfFw==,
+      }
+
   http-errors@2.0.0:
     resolution:
       {
@@ -5649,6 +5673,18 @@ packages:
       {
         integrity: sha512-WDC/ui2VVRrz3jOVi+XtjqkDjiVjTtFaAGiW37k6b+ohyQ5wYDOGkvCZa8+H0nx3gyvv0+BST9xuOgIyGQ00gw==,
       }
+
+  i18next@27.1.1:
+    resolution:
+      {
+        integrity: sha512-Qq3aJizS3RXQ30crhx9BKQLrHoa6GKpgrOJjVZ9vgj3EBxAddrmVfDNUrAMxSUimw5Jc+ld4SSZUAzf1q4nGyQ==,
+      }
+    engines: { node: '>=22' }
+    peerDependencies:
+      typescript: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   iceberg-js@0.8.1:
     resolution:
@@ -7881,6 +7917,23 @@ packages:
     peerDependencies:
       react: '>=17.0.0'
 
+  react-i18next@18.0.1:
+    resolution:
+      {
+        integrity: sha512-kPWXI0E/lrPj3+/umcKNzYZVnWmEedLiamMzDIHfbs+5ANf6yzvlZsjKou8f7kaGkfMMDLIZBejV+4aSN1CyBw==,
+      }
+    engines: { node: '>=22' }
+    peerDependencies:
+      '@types/react': '*'
+      i18next: '>= 27.0.1'
+      react: '>= 18.0.0'
+      typescript: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      typescript:
+        optional: true
+
   react-is@16.13.1:
     resolution:
       {
@@ -8242,6 +8295,12 @@ packages:
     resolution:
       {
         integrity: sha512-guoltQEx+9aMf2gDZ0s62EcV8lsXR+0w8915TC3ITdn2YueuNjdAYh/levpU9nFaoChh9RUS5ZdQMrKfVEN9tw==,
+      }
+
+  rtl-detect@1.1.2:
+    resolution:
+      {
+        integrity: sha512-PGMBq03+TTG/p/cRB7HCLKJ1MgDIi07+QU1faSjiYRfmY5UsAttV9Hs08jDAHVwcOwmVLcSJkpwyfXszVjWfIQ==,
       }
 
   run-parallel@1.2.0:
@@ -13298,6 +13357,12 @@ snapshots:
       - supports-color
       - typescript
 
+  expo-localization@58.0.5(expo@58.0.24)(react@19.3.0):
+    dependencies:
+      expo: 58.0.24(66f6aa627016835a3ef337a2872276a2)
+      react: 19.3.0
+      rtl-detect: 1.1.2
+
   expo-modules-autolinking@58.1.0(supports-color@8.1.1)(typescript@5.8.2):
     dependencies:
       '@expo/platforms': 58.0.1
@@ -13722,6 +13787,8 @@ snapshots:
 
   html-escaper@2.0.2: {}
 
+  html-parse-stringify@4.0.1: {}
+
   http-errors@2.0.0:
     dependencies:
       depd: 2.0.0
@@ -13749,6 +13816,10 @@ snapshots:
   husky@9.1.7: {}
 
   hyphenate-style-name@1.1.0: {}
+
+  i18next@27.1.1(typescript@5.8.2):
+    optionalDependencies:
+      typescript: 5.8.2
 
   iceberg-js@0.8.1: {}
 
@@ -15484,6 +15555,15 @@ snapshots:
     dependencies:
       react: 19.3.0
 
+  react-i18next@18.0.1(@types/react@19.0.14)(i18next@27.1.1(typescript@5.8.2))(react@19.3.0)(typescript@5.8.2):
+    dependencies:
+      html-parse-stringify: 4.0.1
+      i18next: 27.1.1(typescript@5.8.2)
+      react: 19.3.0
+    optionalDependencies:
+      '@types/react': 19.0.14
+      typescript: 5.8.2
+
   react-is@16.13.1: {}
 
   react-is@18.3.1: {}
@@ -15767,6 +15847,8 @@ snapshots:
   reusify@1.1.0: {}
 
   rrweb-cssom@0.8.0: {}
+
+  rtl-detect@1.1.2: {}
 
   run-parallel@1.2.0:
     dependencies:
